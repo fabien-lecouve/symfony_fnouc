@@ -1,0 +1,7 @@
+{% if categories is defined and categories is not null %}
+    {% for category in categories %}
+    <ul>
+        <li><a href="{{ path('app_category_show', {id: category.id}) }}">{{ category.name }}</a></li>
+    </ul>
+    {% endfor %}
+{% endif %}
